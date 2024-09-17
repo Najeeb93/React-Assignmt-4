@@ -5,10 +5,8 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div><h1>Hello World</h1></div>
   )
 }
 
