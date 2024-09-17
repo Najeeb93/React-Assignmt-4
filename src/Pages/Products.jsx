@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import CategoryChip from "./CategoryChip";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -45,7 +46,7 @@ function Products() {
          ) : (
           <div>
             <div className="flex flex-wrap">
-              {categories.map((category) => )}
+              {categories.map((category) => <CategoryChip category={category} key={category.slug}/>)}
 
             </div>
             <div className='flex flex-wrap -m-4 my-4'>
