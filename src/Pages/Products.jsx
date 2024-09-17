@@ -27,7 +27,7 @@ function Products() {
         <h1 className="text-center text-3xl">Loading...</h1>
          ) : (
             <div class='flex flex-wrap -m-4'>
-        {products.map((item)=> (<ProductCard key={item.id}/>))}</div>
+        {products.map((item)=> (<ProductCard item={item} key={item.id}/>))}</div>
     )}
 
     </div>
