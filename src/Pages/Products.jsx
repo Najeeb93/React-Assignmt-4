@@ -50,7 +50,7 @@ function Products() {
          ) : (
           <div>
             <div className="flex flex-wrap gap-2">
-            <CategoryChip 
+            <CategoryChip onClick={() => setChosenCategory('All')}
             isChosen={chosenCategory === 'All'}
             category={{
               slug : 'All',
