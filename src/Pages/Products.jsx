@@ -21,8 +21,12 @@ function Products() {
       });
   }, []);
   return (
-    <div className="container mx-auto">
-
+    <div className="container mx-auto">{
+        loading ? (
+        <h1 className="text-center text-3xl">Loading...</h1>
+         ) : (
+        <h1 className="text-center text-3xl">Data Fetched Succesfully</h1>
+    )}
 
     </div>
   );
