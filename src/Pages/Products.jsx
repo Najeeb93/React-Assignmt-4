@@ -43,8 +43,15 @@ function Products() {
         loading ? (
         <h1 className="text-center text-3xl">Loading...</h1>
          ) : (
+          <div>
+            <div className="flex flex-wrap">
+              {categories.map((category) => )}
+
+            </div>
             <div className='flex flex-wrap -m-4 my-4'>
-        {products.map((item)=> (<ProductCard item={item} key={item.id}/>))}</div>
+        {products.map((item)=> (<ProductCard item={item} key={item.id}/>))}
+        </div>
+          </div>
     )}
 
     </div>
