@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ProductCard from "./ProductCard";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,8 @@ function Products() {
         loading ? (
         <h1 className="text-center text-3xl">Loading...</h1>
          ) : (
-        <h1 className="text-center text-3xl">Data Fetched Succesfully</h1>
+            <div class='flex flex-wrap -m-4'>
+        {products.map((item)=> (<ProductCard key={item.id}/>))}</div>
     )}
 
     </div>
