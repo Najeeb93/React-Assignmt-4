@@ -1,6 +1,6 @@
 
 
-function CategoryChip({category}){
+function CategoryChip({category, isChosen}){
     const {name} = category
     return (
         <div className="p-2 border-purple-400

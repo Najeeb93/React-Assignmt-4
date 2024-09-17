@@ -5,8 +5,9 @@ import CategoryChip from "./CategoryChip";
 
 function Products() {
   const [products, setProducts] = useState([]);
-  const [categories, SetCategories] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [categories, SetCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [chosenCategory, setChosenCategory] = useState('All');
 
   useEffect(() => {
     axios
@@ -46,11 +47,14 @@ function Products() {
          ) : (
           <div>
             <div className="flex flex-wrap gap-2">
-            <CategoryChip category={{
+            <CategoryChip 
+            isChosen={chosenCategory === 'All'}
+            category={{
               slug : 'All',
               name : 'All',
             }}/>
-              {categories.map((category) => <CategoryChip category={category} key={category.slug}/>)}
+              {categories.map((category) => <CategoryChip isChosen={category.slug === chosenCategory}
+               category={category} key={category.slug}/>)}
 
             </div>
             <div className='flex flex-wrap -m-4 my-4'>
