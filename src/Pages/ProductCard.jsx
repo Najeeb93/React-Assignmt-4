@@ -4,7 +4,7 @@ function ProductCard({item}) {
     console.log('item-->',item);
     const {thumbnail, category, title, price} = item;
     return (
-        <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-lg">
   <a className="block relative h-48 rounded overflow-hidden">
     <img
       alt="ecommerce"
