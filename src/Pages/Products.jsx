@@ -45,7 +45,11 @@ function Products() {
         <h1 className="text-center text-3xl">Loading...</h1>
          ) : (
           <div>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap gap-2">
+            <CategoryChip category={{
+              slug : 'All',
+              name : 'All',
+            }}/>
               {categories.map((category) => <CategoryChip category={category} key={category.slug}/>)}
 
             </div>
