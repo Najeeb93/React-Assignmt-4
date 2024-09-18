@@ -1,10 +1,26 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 
 function ProdutDetail(){
     const {id} = useParams();
     const [product, setProduct] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [notFound, setNotFound] = useState(false);
+
+    useEffect(() => {
+        axios.get(`https://fakestoreapi.com/products/${id}`)
+        .then((response) => {
+            setProduct(response.data)
+            setLoading(false)
+        })
+        .catch((error) => {
+            console.error(error);
+            setNotFound(true)
+            setLoading(false);
+        })
+    }, [])
 
     return (
   <div class="container px-5 py-24 mx-auto">
