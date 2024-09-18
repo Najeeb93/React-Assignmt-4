@@ -13,8 +13,8 @@ function ProdutDetail() {
     setNotFound(false);
     axios
       .get(`https://fakestoreapi.com/products/${id}`)
-      .then((response) => {
-        setProduct(response.data);
+      .then((res) => {
+        setProduct(res.data);
         setLoading(false);
       })
       .catch((error) => {
@@ -89,7 +89,7 @@ function ProdutDetail() {
         </div>
       </div>
       <img
-        alt="ecommerce"
+        
         className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
         src={product.thumbnail}
       />
