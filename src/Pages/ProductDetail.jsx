@@ -1,6 +1,11 @@
+import { useState } from "react";
+import { useParams } from "react-router";
 
 
 function ProdutDetail(){
+    const {id} = useParams();
+    const [product, setProduct] = useState({});
+
     return (
   <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
