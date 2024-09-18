@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
 
 
 function ProductCard({item}) {
     console.log('item-->',item);
-    const {thumbnail, category, title, price} = item;
+    const {thumbnail, category, title, price, id} = item;
     return (
-        <div className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-lg">
+        <Link to={`/products/${id}`} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-lg">
+        <div>
   <a className="block relative h-48 rounded overflow-hidden">
     <img
       alt="ecommerce"
@@ -21,9 +23,8 @@ function ProductCard({item}) {
     </h2>
     <p className="mt-1">{price}</p>
   </div>
-</div>
+</div></Link>
 
-    )
-}
+    )};
 
 export default ProductCard;
