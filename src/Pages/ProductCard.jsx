@@ -5,11 +5,11 @@ function ProductCard({item}) {
     console.log('item-->',item);
     const {thumbnail, category, title, price, id} = item;
     return (
-        <Link to={`/products/${id}`} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-lg">
+        <Link to={`/products/${id}`} className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-xl">
         <div>
   <a className="block relative h-48 rounded overflow-hidden">
     <img
-      alt="ecommerce"
+      alt="ecommerce"                                   
       className="object-cover object-center w-full h-full block"
       src={thumbnail}
     />
