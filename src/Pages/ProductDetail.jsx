@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 
-function ProdutDetail() {
+function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
@@ -103,4 +103,4 @@ function ProdutDetail() {
   );
 }
 
-export default ProdutDetail;
+export default ProductDetail;
