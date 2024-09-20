@@ -13,8 +13,13 @@ function Pagination() {
         setTotal(res.total);
       })
   }, []);
-  console.log('products-->', products);
-  console.log('total-->', total);
+  
+  useEffect(()=>{
+    const handleScroll = (e)=>{
+        
+    }
+    window.addEventListener('scroll', handleScroll)
+  }, [])
   
   return (
     <div>
