@@ -21,6 +21,19 @@ function Pagination() {
       <h1 className="font-medium text-3xl underline">
         Pagination in React Ecommerce
       </h1>
+      <div className="grid grid-cols-4">
+        {
+            products.map((data)=> 
+            <div  key={data.id}className="border shadow">
+                <img src={data.thumbnail} height={200} width={200}/>
+                <div className="flex justify-between p-2">
+                <h5 className="font-semibold">{data.title}</h5>
+                <h5 className="font-semibold">{data.price}</h5>
+                </div>
+            </div> 
+            )
+        }
+      </div>
     </div>
   );
 }
