@@ -1,3 +1,4 @@
+import { document } from "postcss";
 import { useEffect, useState } from "react";
 
 function Pagination() {
@@ -5,18 +6,24 @@ function Pagination() {
   const [limit, setLimit] = useState(20);
   const [skip, setSkip] = useState(0);
   const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`)
       .then((res) => res.json())
       .then((res)=> {
         setProducts(res.products);
         setTotal(res.total);
       })
-  }, []);
+  }, [limit]);
   
   useEffect(()=>{
     const handleScroll = (e)=>{
-        
+        if(window.innerHeight + document.documentElement.scrollTop == document.documentElement.offsetHeight)
+        {
+            setLimit(limit + 20)
+        }
+
     }
     window.addEventListener('scroll', handleScroll)
   }, [])
