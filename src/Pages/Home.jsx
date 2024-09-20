@@ -19,7 +19,7 @@ function Home() {
       </svg>
       <span className="ml-3 text-xl">Tailblocks</span>
     </a>
-    <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+    <nav className="md:ml-8 flex flex-wrap items-center text-base justify-center">
       <a className="mr-5 hover:text-gray-900"><Link to='/product'>Products</Link></a>
 
       <a className="mr-5 hover:text-gray-900">Second Link</a>
