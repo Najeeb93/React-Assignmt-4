@@ -5,7 +5,7 @@ import { Pagination } from 'antd';
 function PaginationProuct() {
   const [products, setProducts] = useState([]);
   const [limit, setLimit] = useState(20);
-  const [skip, setSkip] = useState(20);
+  const [skip, setSkip] = useState(0);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
 
@@ -21,7 +21,7 @@ function PaginationProuct() {
         setTotal(res.total);
         setLoading(false);
       })
-  }, [limit]);
+  }, [limit, skip]);
   
 //   useEffect(()=>{
 //     const handleScroll = ()=>{
@@ -53,7 +53,9 @@ function PaginationProuct() {
             </div> 
             )}
       </div>
-             <Pagination defaultCurrent={1} total={total} pageSize={limit} />
+             <Pagination 
+             onChange={(num)=> setSkip((num - 1 ) * 20)}
+             defaultCurrent={1} total={total} pageSize={limit} />
     </div>
   );
 }
