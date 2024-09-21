@@ -7,6 +7,8 @@ function Pagination() {
   const [skip, setSkip] = useState(0);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
+
+
   useEffect(() => {
     setLoading(true);
     fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`)
@@ -18,17 +20,17 @@ function Pagination() {
       })
   }, [limit]);
   
-  useEffect(()=>{
-    const handleScroll = ()=>{
-        if(window.innerHeight + document.documentElement.scrollTop == document.documentElement.offsetHeight)
-        {
-            setLimit(limit + 20)
-        }
+//   useEffect(()=>{
+//     const handleScroll = ()=>{
+//         if(window.innerHeight + document.documentElement.scrollTop == document.documentElement.offsetHeight)
+//         {
+//             setLimit(limit + 20)
+//         }
 
-    };
-    window.addEventListener('scroll', handleScroll)
-  }, [limit])
-  console.log('products length=>', products.length);
+//     };
+//     window.addEventListener('scroll', handleScroll)
+//   }, [limit, loading])
+//   console.log('products length=>', products.length);
   
   return (
     <div>
