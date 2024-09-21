@@ -14,19 +14,21 @@ function Pagination() {
       .then((res)=> {
         setProducts(res.products);
         setTotal(res.total);
+        setLoading(false);
       })
   }, [limit]);
   
   useEffect(()=>{
-    const handleScroll = (e)=>{
+    const handleScroll = ()=>{
         if(window.innerHeight + document.documentElement.scrollTop == document.documentElement.offsetHeight)
         {
             setLimit(limit + 20)
         }
 
-    }
+    };
     window.addEventListener('scroll', handleScroll)
-  }, [])
+  }, [limit])
+  console.log('products length=>', products.length);
   
   return (
     <div>
@@ -43,8 +45,10 @@ function Pagination() {
                 <h5 className="font-semibold">{data.price}</h5>
                 </div>
             </div> 
-            )
-        }
+            )}
+            {
+                loading ? <h1 className="text-center my-2">Loading... </h1> : null
+            }
       </div>
     </div>
   );
