@@ -5,7 +5,7 @@ import { Pagination } from 'antd';
 function PaginationProuct() {
   const [products, setProducts] = useState([]);
   const [limit, setLimit] = useState(20);
-  const [skip, setSkip] = useState(0);
+  const [skip, setSkip] = useState(20);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
 
@@ -52,8 +52,8 @@ function PaginationProuct() {
                 </div>
             </div> 
             )}
-             <Pagination defaultCurrent={1} total={total} />
       </div>
+             <Pagination defaultCurrent={1} total={total} pageSize={limit} />
     </div>
   );
 }
