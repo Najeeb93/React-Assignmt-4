@@ -24,16 +24,7 @@ function AddCart() {
       })
   }, [limit, skip]);
   
-//   useEffect(()=>{
-//     const handleScroll = ()=>{
-//         if(window.innerHeight + document.documentElement.scrollTop == document.documentElement.offsetHeight)
-//         {
-//             setLimit(limit + 20)
-//         }
 
-//     };
-//     window.addEventListener('scroll', handleScroll)
-//   }, [limit, loading])
   console.log('products length=>', products.length, total );
   
   return (
