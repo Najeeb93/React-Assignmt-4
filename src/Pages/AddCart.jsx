@@ -39,7 +39,7 @@ function AddCart() {
   return (
     <div>
       <h1 className="font-medium text-3xl underline">
-        Pagination in React Ecommerce
+        Add to Cart in React Ecommerce
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xlg:grid-cols-4 gap-3 my-10">
           { loading ? <h1 className="text-center my-2">Loading... </h1> : null} 
@@ -61,4 +61,4 @@ function AddCart() {
   );
 }
 
-export default PaginationProuct;
+export default AddCart;
