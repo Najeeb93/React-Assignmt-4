@@ -1,8 +1,9 @@
 
+
 import { useEffect, useState } from "react";
 import { Pagination } from 'antd';
 
-function PaginationProuct() {
+function AddCart() {
   const [products, setProducts] = useState([]);
   const [limit, setLimit] = useState(20);
   const [skip, setSkip] = useState(0);
