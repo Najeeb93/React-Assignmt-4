@@ -51,6 +51,9 @@ function AddCart() {
                 <h5 className="font-semibold">{data.title}</h5>
                 <h5 className="font-semibold">{data.price}</h5>
                 </div>
+                <div>
+                    <button>Add to Cart</button>
+                </div>
             </div> 
             )}
       </div>
