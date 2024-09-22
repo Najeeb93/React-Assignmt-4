@@ -7,7 +7,7 @@ import PaginationProuct from './Pages/Pagination.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <PaginationProuct/>
+    {/* <PaginationProuct/> */}
     {/* <App /> */}
   </StrictMode>,
 )
