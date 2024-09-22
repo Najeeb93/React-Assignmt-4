@@ -29,12 +29,12 @@ function AddCart() {
   
   return (
     <div>
-        <div>
+        <div className="flex justify-between">
 
       <h1 className="font-medium text-3xl underline">
         Add to Cart in React Ecommerce
       </h1>
-      <button className="bg-red-300 px-5 py-2 rounded w-full m-2">Cart</button>
+      <button className="bg-red-300 px-5 py-2 rounded  m-2">Cart</button>
         </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xlg:grid-cols-4 gap-3 my-10">
           { loading ? <h1 className="text-center my-2">Loading... </h1> : null} 
