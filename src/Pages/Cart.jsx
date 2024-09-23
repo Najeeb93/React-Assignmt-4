@@ -1,10 +1,10 @@
 
 
-function Cart() {
+function CartPage() {
     return (
         <h1>Cart pages</h1>
     )
 }
 
 
-export default Cart;
+export default CartPage;

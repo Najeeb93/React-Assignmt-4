@@ -7,7 +7,8 @@ import Products from './Pages/Products'
 import Home from './Pages/Home'
 import ProductDetail from './Pages/ProductDetail'
 import AddCart from './Pages/AddCart'
-
+import Cart from './Pages/Cart'
+import CartPage from './Pages/Cart'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<AddCart/>}  />
+      <Route path='/cart' element={<CartPage/>}  />
     </Routes>
     </BrowserRouter>
   )

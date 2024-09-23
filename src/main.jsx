@@ -8,8 +8,8 @@ import AddCart from './Pages/AddCart.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AddCart/>
+    <App />
+    {/* <AddCart/> */}
     {/* <PaginationProuct/> */}
-    {/* <App /> */}
   </StrictMode>,
 )
