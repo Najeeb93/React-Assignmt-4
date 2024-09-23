@@ -28,7 +28,7 @@ function AddCart() {
   console.log('products length=>', products.length, total );
   
   return (
-    <div>
+    <div className="contianer mx-auto">
         <div className="flex justify-between">
 
       <h1 className="font-medium text-3xl underline">
