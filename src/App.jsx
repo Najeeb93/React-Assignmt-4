@@ -11,13 +11,13 @@ import ProductDetail from './Pages/ProductDetail'
 function App() {
 
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/product" element={<Products />} />
-      <Route path="/products/:id" element={<ProductDetail />} />
-    </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    // <Routes>
+    //   <Route path="/" element={<Home />} />
+    //   <Route path="/product" element={<Products />} />
+    //   <Route path="/products/:id" element={<ProductDetail />} />
+    // </Routes>
+    // </BrowserRouter>
   )
 }
 
