@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const Context = createContext();
 
-function CartContextProvider(children) {
+function CartContext(children) {
   const [cartItems, setCartItems] = useState([]);
 
   function addItemToCart(item) {
@@ -20,11 +20,24 @@ function CartContextProvider(children) {
     const arr = cartItems;
     const itemIndex = cartItems.findIndex((data) => data.id == item.id);
     arr.splice(itemIndex, 1);
-    setCartItems([...arr])
+    setCartItems([...arr]);
+  }
+
+  function isItemAdded(id) {
+    const arr = cartItems;
+    const itemIndex = cartItems.findIndex((data) => data.id == item.id);
+   if(itemIndex == -1) {
+    return null;
+   } else {
+    return arr[itemIndex];
+   }
   }
   return (
-    <CartContextProvider.Provider>{children}</CartContextProvider.Provider>
+    <CartContext.Provider
+     value={{cartItems, addItemToCart, removeItemCart, isItemAdded}}>
+        {children}
+    </CartContext.Provider>
   );
 }
 
-export default CartContextProvider;
+export default CartContext;
