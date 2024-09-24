@@ -30,7 +30,7 @@ function AddCart() {
   
   return (
     <div className="contianer mx-auto">
-        <div className="flex justify-between">
+        <div className="flex justify-between my-5">
 
       <h1 className="font-medium text-3xl underline">
         Add to Cart in React Ecommerce
