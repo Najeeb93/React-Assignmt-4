@@ -15,6 +15,13 @@ function CartContextProvider(children) {
       arr[itemIndex].quantity++;
     }
   }
+
+  function removeItemCart(id) {
+    const arr = cartItems;
+    const itemIndex = cartItems.findIndex((data) => data.id == item.id);
+    arr.splice(itemIndex, 1);
+    setCartItems([...arr])
+  }
   return (
     <CartContextProvider.Provider>{children}</CartContextProvider.Provider>
   );
