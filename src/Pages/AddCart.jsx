@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Pagination } from 'antd';
+import { ShoppingCartOutlined } from "@ant-design/icons";
 
 function AddCart() {
   const [products, setProducts] = useState([]);
@@ -34,7 +35,7 @@ function AddCart() {
       <h1 className="font-medium text-3xl underline">
         Add to Cart in React Ecommerce
       </h1>
-      <button className="bg-red-300 px-5 py-2 rounded  m-2">Cart</button>
+      <ShoppingCartOutlined/>
         </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xlg:grid-cols-4 gap-3 my-10">
           { loading ? <h1 className="text-center my-2">Loading... </h1> : null} 
