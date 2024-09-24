@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Badge, Pagination } from 'antd';
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 function AddCart() {
   const [products, setProducts] = useState([]);
@@ -35,9 +36,11 @@ function AddCart() {
       <h1 className="font-medium text-3xl underline">
         Add to Cart in React Ecommerce
       </h1>
-      <Badge>
+      <Link to={'/cart'} >
+      <Badge count={5}>
       <ShoppingCartOutlined style={{fontSize: 40}}/>
       </Badge>
+      </Link>
         </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xlg:grid-cols-4 gap-3 my-10">
           { loading ? <h1 className="text-center my-2">Loading... </h1> : null} 
