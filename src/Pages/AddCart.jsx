@@ -62,7 +62,8 @@ function AddCart() {
                     <button className="bg-red-300 px-5 py-2 rounded w-full m-2"
                     onClick={()=> addItemToCart(data)}>
                       {isItemAdded(data.id)
-                       ? `Added ${isItemAdded(data.id).quantity}` : `Add to Cart`}</button>
+                       ? `Added ${isItemAdded(data.id).quantity}`
+                        : `Add to Cart`}</button>
                 </div>
             </div> 
             )}
