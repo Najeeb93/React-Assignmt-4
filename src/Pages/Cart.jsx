@@ -4,7 +4,7 @@ import { Image } from "antd";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 
 function CartPage() {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, removeItemCart } = useContext(CartContext);
 
   const totalAmount = cartItems.reduce((total, obj)=> total + obj.quantity * obj.price , 0)
   const totalQuantity = cartItems.reduce((total, obj)=> total + obj.quantity , 0)
@@ -15,9 +15,11 @@ function CartPage() {
       <div className="flex gap-5 my-2">
         <div className="flex-grow flex flex-col border p-4 justify-center items-center">
         <h1 className="text-xl">Total Quantity</h1>
+        <h1 className="text-xl">{totalQuantity}</h1>
         </div>
         <div className="flex-grow flex flex-col border p-4 justify-center items-center">
         <h1 className="text-xl">Total Amount</h1>
+        <h1 className="text-xl">{totalAmount}</h1>
         </div>
         <div className="flex-grow flex flex-col border p-4 justify-center items-center">
         <h1 className="text-xl">Checkout</h1>
@@ -39,7 +41,7 @@ function CartPage() {
                 disabled={data.quantity <= 1}
                  className="bg-red-400 p-2 rounded-full text-white cursor-pointer"/>
             </div>
-            <button className="w-40 my-4">Remove Item</button>
+            <button onClick={()=> removeItemCart(data.id)} className="w-40 my-4">Remove item</button>
           </div>
         </div>
       ))}

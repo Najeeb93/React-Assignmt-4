@@ -19,7 +19,7 @@ function CartContextProvider({children}) {
 
   function removeItemCart(id) {
     const arr = cartItems;
-    const itemIndex = cartItems.findIndex((data) => data.id == item.id);
+    const itemIndex = cartItems.findIndex((data) => data.id == id);
     arr.splice(itemIndex, 1);
     setCartItems([...arr]);
   }
