@@ -9,7 +9,7 @@ import { CartContext } from "./CartContext";
 
 function AddCart() {
 
-  const {cartItems} = useContext(CartContext);
+  const {cartItems, addItemToCart} = useContext(CartContext);
   console.log('cartItems-->', cartItems);
   
   const [products, setProducts] = useState([]);
@@ -59,7 +59,9 @@ function AddCart() {
                 <h5 className="font-semibold">{data.price}</h5>
                 </div>
                 <div>
-                    <button className="bg-red-300 px-5 py-2 rounded w-full m-2">Add to Cart</button>
+                    <button className="bg-red-300 px-5 py-2 rounded w-full m-2"
+                    onClick={()=> addItemToCart(data)}
+                    >Add to Cart</button>
                 </div>
             </div> 
             )}
