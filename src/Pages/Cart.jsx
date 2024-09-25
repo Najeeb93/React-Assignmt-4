@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Image } from "antd";
+import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 
 function CartPage() {
   const { cartItems } = useContext(CartContext);
@@ -16,7 +17,11 @@ function CartPage() {
             <h1 className="font-normal text-lg mb-2">{data.description}</h1>
             <h1 className="font-normal text-lg mb-2">{data.category}</h1>
             <h1 className="font-normal text-lg mb-2">Price : {data.price}</h1>
-
+            <div>
+                <PlusOutlined/>
+                <h1>{data.quantity}</h1>
+                <MinusOutlined/>
+            </div>
           </div>
         </div>
       ))}
