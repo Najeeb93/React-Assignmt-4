@@ -4,11 +4,13 @@ import { useContext, useEffect, useState } from "react";
 import { Badge, Pagination } from 'antd';
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import CartContext from "./CartContext";
+import CartContextItem from "./CartContext";
 
 function AddCart() {
 
-  const {} = useContext(CartContext);
+  const {cartItems} = useContext(CartContextItem)
+  console.log('cartItems-->', cartItems);
+  
   const [products, setProducts] = useState([]);
   const [limit, setLimit] = useState(20);
   const [skip, setSkip] = useState(0);
