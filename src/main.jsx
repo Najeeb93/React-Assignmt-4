@@ -4,14 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import PaginationProuct from './Pages/Pagination.jsx'
 import AddCart from './Pages/AddCart.jsx'
-import CartContextItem from './Pages/CartContext.jsx'
+import CartContextProvider from './Pages/CartContext.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CartContextItem>
+    <CartContextProvider>
     <App />
-    </CartContextItem>
+    </CartContextProvider>
     {/* <AddCart/> */}
     {/* <PaginationProuct/> */}
   </StrictMode>,

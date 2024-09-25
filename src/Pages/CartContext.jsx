@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
-function CartContextItem(children) {
+function CartContextProvider(children) {
   const [cartItems, setCartItems] = useState([]);
 
   function addItemToCart(item) {
@@ -34,12 +34,15 @@ function CartContextItem(children) {
    }
   }
   return (
-    <CartContextItem.Provider value={{cartItems, addItemToCart, removeItemCart, isItemAdded}}>
+    <CartContext.Provider value={{cartItems, addItemToCart, removeItemCart, isItemAdded}}>
 
         {children}
-    </CartContextItem.Provider>
+    </CartContext.Provider> 
+    
+
+
       
   );
 }
 
-export default CartContextItem;
+export default CartContextProvider;
