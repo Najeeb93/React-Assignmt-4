@@ -43,7 +43,7 @@ function AddCart() {
         Add to Cart in React Ecommerce
       </h1>
       <Link to={'/cart'} >
-      <Badge count={5}>
+      <Badge count={cartItems.length}>
       <ShoppingCartOutlined style={{fontSize: 40}}/>
       </Badge>
       </Link>
