@@ -17,10 +17,10 @@ function CartPage() {
             <h1 className="font-normal text-lg mb-2">{data.description}</h1>
             <h1 className="font-normal text-lg mb-2">{data.category}</h1>
             <h1 className="font-normal text-lg mb-2">Price : {data.price}</h1>
-            <div>
-                <PlusOutlined/>
-                <h1>{data.quantity}</h1>
-                <MinusOutlined/>
+            <div className="flex gap-3 items-center">
+                <PlusOutlined className="bg-blue-400 p-2 rounded-full text-white cursor-pointer"/>
+                <h1 className="text-xl">{data.quantity}</h1>
+                <MinusOutlined className="bg-red-400 p-2 rounded-full text-white cursor-pointer"/>
             </div>
           </div>
         </div>
