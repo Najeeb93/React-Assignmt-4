@@ -9,7 +9,7 @@ import { CartContext } from "./CartContext";
 
 function AddCart() {
 
-  const {cartItems, addItemToCart} = useContext(CartContext);
+  const {cartItems, addItemToCart, isItemAdded} = useContext(CartContext);
   console.log('cartItems-->', cartItems);
   
   const [products, setProducts] = useState([]);
@@ -33,7 +33,7 @@ function AddCart() {
   }, [limit, skip]);
   
 
-  console.log('products length=>', products.length, total );
+  // console.log('products length=>', products.length, total );
   
   return (
     <div className="contianer mx-auto">
@@ -60,8 +60,9 @@ function AddCart() {
                 </div>
                 <div>
                     <button className="bg-red-300 px-5 py-2 rounded w-full m-2"
-                    onClick={()=> addItemToCart(data)}
-                    >Add to Cart</button>
+                    onClick={()=> addItemToCart(data)}>
+                      {isItemAdded(data.id)
+                       ? `Added ${isItemAdded(data.id).quantity}` : `Add to Cart`}</button>
                 </div>
             </div> 
             )}

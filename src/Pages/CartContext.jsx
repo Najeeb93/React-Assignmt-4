@@ -26,7 +26,7 @@ function CartContextProvider({children}) {
 
   function isItemAdded(id) {
     const arr = cartItems;
-    const itemIndex = cartItems.findIndex((data) => data.id == item.id);
+    const itemIndex = cartItems.findIndex((data) => data.id == id);
    if(itemIndex == -1) {
     return null;
    } else {
