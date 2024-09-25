@@ -13,15 +13,17 @@ function CartPage() {
         <div key={data.id} className="flex border items-center my-2 p-3">
           <Image src={data.thumbnail} height={100} width={150} />
           <div className="flex flex-col pl-5">
-            <h1 className="font-medium text-xl mb-2">{data.title}</h1>
+            <h1 className="font-medium text-xl mb-2">{data.title} {`(${data.category})`}</h1>
             <h1 className="font-normal text-lg mb-2">{data.description}</h1>
-            <h1 className="font-normal text-lg mb-2">{data.category}</h1>
             <h1 className="font-normal text-lg mb-2">Price : {data.price}</h1>
             <div className="flex gap-3 items-center">
                 <PlusOutlined className="bg-blue-400 p-2 rounded-full text-white cursor-pointer"/>
                 <h1 className="text-xl">{data.quantity}</h1>
-                <MinusOutlined className="bg-red-400 p-2 rounded-full text-white cursor-pointer"/>
+                <MinusOutlined
+                disabled={data.quantity <= 1}
+                 className="bg-red-400 p-2 rounded-full text-white cursor-pointer"/>
             </div>
+            <button className="w-40 my-4">Remove Item</button>
           </div>
         </div>
       ))}
