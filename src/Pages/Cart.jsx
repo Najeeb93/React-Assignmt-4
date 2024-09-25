@@ -15,6 +15,7 @@ function CartPage() {
             <h1 className="font-medium text-xl mb-2">{data.title}</h1>
             <h1 className="font-normal text-lg mb-2">{data.describtion}</h1>
             <h1 className="font-normal text-lg mb-2">{data.category}</h1>
+            <h1 className="font-normal text-lg mb-2">Price {data.price}</h1>
 
           </div>
         </div>
