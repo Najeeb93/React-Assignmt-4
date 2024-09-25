@@ -6,18 +6,21 @@ import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 function CartPage() {
   const { cartItems } = useContext(CartContext);
 
+  const totalAmount = cartItems.reduce((total, obj)=> total + obj.quantity * obj.price , 0)
+  const totalQuantity = cartItems.reduce((total, obj)=> total + obj.quantity , 0)
+
   return (
     <div className="contianer mx-auto my-5">
       <h1 className="font-medium text-3xl underline">Cart Items</h1>
-      <div className="flex gap-5">
+      <div className="flex gap-5 my-2">
         <div className="flex-grow flex flex-col border p-4 justify-center items-center">
-        <h1>Total Quantity</h1>
+        <h1 className="text-xl">Total Quantity</h1>
         </div>
         <div className="flex-grow flex flex-col border p-4 justify-center items-center">
-        <h1>Total Amount</h1>
+        <h1 className="text-xl">Total Amount</h1>
         </div>
         <div className="flex-grow flex flex-col border p-4 justify-center items-center">
-        <h1>Checkout</h1>
+        <h1 className="text-xl">Checkout</h1>
         </div>
 
       </div>
