@@ -14,6 +14,7 @@ function CartContext(children) {
     } else {
       arr[itemIndex].quantity++;
     }
+    setCartItems([...arr]);
   }
 
   function removeItemCart(id) {
