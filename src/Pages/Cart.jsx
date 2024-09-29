@@ -40,10 +40,12 @@ function CartPage() {
               </Button>
                 
                 <h1 className="text-xl">{data.quantity}</h1>
-                <button danger className="bg-red-400" icon={<MinusOutlined/>} disabled={data.quantity === 1}>
+                <Button danger className="bg-red-400" icon={<MinusOutlined/>} disabled={data.quantity === 1} >
+                  
+                  </Button> 
 
                 
-                </button>
+                
             </div>
             <button onClick={()=> removeItemCart(data.id)} className="w-40 my-4">Remove item</button>
           </div>
