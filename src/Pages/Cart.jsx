@@ -4,7 +4,7 @@ import { Button, Image } from "antd";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 
 function CartPage() {
-  const { cartItems, removeItemCart } = useContext(CartContext);
+  const { cartItems, removeItemCart, addItemToCart } = useContext(CartContext);
 
   const totalAmount = cartItems.reduce((total, obj)=> total + obj.quantity * obj.price , 0)
   const totalQuantity = cartItems.reduce((total, obj)=> total + obj.quantity , 0)
@@ -35,7 +35,7 @@ function CartPage() {
             <h1 className="font-normal text-lg mb-2">Price : {data.price}</h1>
 
             <div className="flex gap-3 items-center">
-              <Button className="bg-blue-400" icon={<PlusOutlined/>}>
+              <Button  onClick={()=> addItemToCart()} icon={<PlusOutlined/>}>
 
               </Button>
                 
