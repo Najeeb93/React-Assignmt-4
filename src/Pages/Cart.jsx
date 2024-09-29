@@ -35,7 +35,7 @@ function CartPage() {
             <h1 className="font-normal text-lg mb-2">Price : {data.price}</h1>
 
             <div className="flex gap-3 items-center">
-              <Button  onClick={()=> addItemToCart()} icon={<PlusOutlined/>}>
+              <Button  onClick={()=> addItemToCart(data)} icon={<PlusOutlined/>}>
 
               </Button>
                 
