@@ -40,7 +40,7 @@ function CartPage() {
               </Button>
                 
                 <h1 className="text-xl">{data.quantity}</h1>
-                <Button danger className="bg-red-400" icon={<MinusOutlined/>} disabled={data.quantity === 1} >
+                <Button danger icon={<MinusOutlined/>} disabled={data.quantity === 1} >
                   
                   </Button> 
 
