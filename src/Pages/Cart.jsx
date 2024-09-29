@@ -37,10 +37,9 @@ function CartPage() {
             <div className="flex gap-3 items-center">
                 <PlusOutlined className="bg-blue-400 p-2 rounded-full text-white cursor-pointer"/>
                 <h1 className="text-xl">{data.quantity}</h1>
-                <button>
+                <button disabled={data.quantity === 1}>
 
                 <MinusOutlined
-                disabled={data.quantity <= 1}
                  className="bg-red-400 p-2 rounded-full text-white cursor-pointer"/>
                 </button>
             </div>
