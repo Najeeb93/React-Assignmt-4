@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-import { Image } from "antd";
+import { Button, Image } from "antd";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 
 function CartPage() {
@@ -35,12 +35,14 @@ function CartPage() {
             <h1 className="font-normal text-lg mb-2">Price : {data.price}</h1>
 
             <div className="flex gap-3 items-center">
-                <PlusOutlined className="bg-blue-400 p-2 rounded-full text-white cursor-pointer"/>
-                <h1 className="text-xl">{data.quantity}</h1>
-                <button disabled={data.quantity === 1}>
+              <Button className="bg-blue-400" icon={<PlusOutlined/>}>
 
-                <MinusOutlined
-                 className="bg-red-400 p-2 rounded-full text-white cursor-pointer"/>
+              </Button>
+                
+                <h1 className="text-xl">{data.quantity}</h1>
+                <button danger className="bg-red-400" icon={<MinusOutlined/>} disabled={data.quantity === 1}>
+
+                
                 </button>
             </div>
             <button onClick={()=> removeItemCart(data.id)} className="w-40 my-4">Remove item</button>
