@@ -17,6 +17,7 @@ function CartContextProvider({children}) {
     const itemsFromStorage = localStorage.getItem('cartItems');
     if(itemsFromStorage) {
       setCartItems([...JSON.parse(itemsFromStorage)]);
+      setIsLoaded(true);
     }
   }, []);
 
