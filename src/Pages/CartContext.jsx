@@ -6,8 +6,8 @@ function CartContextProvider({children}) {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    
-  })
+    localStorage.setItem("carItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   function addItemToCart(item) {
     const arr = cartItems;
