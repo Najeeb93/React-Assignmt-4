@@ -19,7 +19,7 @@ function CartPage() {
         </div>
         <div className="flex-grow flex flex-col border p-4 justify-center items-center">
         <h1 className="text-xl">Total Amount</h1>
-        <h1 className="text-xl">{totalAmount}</h1>
+        <h1 className="text-xl">{Math.round(totalAmount)}</h1>
         </div>
         <div className="flex-grow flex flex-col border p-4 justify-center items-center">
         <h1 className="text-xl">Checkout</h1>
