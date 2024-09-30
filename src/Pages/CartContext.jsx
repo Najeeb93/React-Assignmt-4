@@ -18,7 +18,8 @@ function CartContextProvider({children}) {
   }
 
 function lessQuanityFromCart(id) {
-  const
+  const arr = cartItems;
+  
 }
 
   function removeItemCart(id) {
