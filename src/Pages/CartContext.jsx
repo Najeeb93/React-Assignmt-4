@@ -14,7 +14,7 @@ function CartContextProvider({children}) {
     if(itemsFromStorage) {
       setCartItems([...JSON.parse(itemsFromStorage)]);
     }
-  })
+  }, []);
 
   function addItemToCart(item) {
     const arr = cartItems;
