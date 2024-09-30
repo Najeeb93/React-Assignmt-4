@@ -41,7 +41,7 @@ function lessQuanityFromCart(id) {
    }
   }
   return (
-    <CartContext.Provider value={{cartItems, addItemToCart, removeItemCart, isItemAdded}}>
+    <CartContext.Provider value={{cartItems, addItemToCart, removeItemCart, lessQuanityFromCart, isItemAdded}}>
 
         {children}
     </CartContext.Provider> 
