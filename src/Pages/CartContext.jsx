@@ -9,6 +9,10 @@ function CartContextProvider({children}) {
     localStorage.setItem("carItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
+  useEffect(() => {
+    const itemsFromStorage = localStorage.getItem('cartItems');
+  })
+
   function addItemToCart(item) {
     const arr = cartItems;
 
