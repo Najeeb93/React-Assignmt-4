@@ -7,7 +7,10 @@ function CartContextProvider({children}) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("carItems", JSON.stringify(cartItems));
+    if(isLoaded) {
+
+      localStorage.setItem("carItems", JSON.stringify(cartItems));
+    }
   }, [cartItems]);
 
   useEffect(() => {
