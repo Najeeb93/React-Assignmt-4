@@ -4,7 +4,7 @@ import { Button, Image } from "antd";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 
 function CartPage() {
-  const { cartItems, removeItemCart, addItemToCart } = useContext(CartContext);
+  const { cartItems, removeItemCart, addItemToCart, lessQuanityFromCart } = useContext(CartContext);
 
   const totalAmount = cartItems.reduce((total, obj)=> total + obj.quantity * obj.price , 0)
   const totalQuantity = cartItems.reduce((total, obj)=> total + obj.quantity , 0)
