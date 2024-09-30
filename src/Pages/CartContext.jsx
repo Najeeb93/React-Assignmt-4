@@ -21,6 +21,7 @@ function lessQuanityFromCart(id) {
   const arr = cartItems;
   const itemIndex = cartItems.findIndex((data) => data.id == id);
   arr[itemIndex].quantity--;
+  setCartItems([...arr]);
 }
 
   function removeItemCart(id) {
