@@ -11,6 +11,9 @@ function CartContextProvider({children}) {
 
   useEffect(() => {
     const itemsFromStorage = localStorage.getItem('cartItems');
+    if(itemsFromStorage) {
+      setCartItems([...JSON.parse(itemsFromStorage)]);
+    }
   })
 
   function addItemToCart(item) {
